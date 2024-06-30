@@ -1,0 +1,49 @@
+{
+  "name": "school-management-nodejs-api",
+  "version": "1.0.0",
+  "description": "Backend API for student registration and management",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/env-cmd -e development node index.js",
+    "start:dev": "./node_modules/.bin/env-cmd -e development node index.js",
+    "start:local": "./node_modules/.bin/env-cmd -e local node index.js",
+    "test:dev": "./node_modules/.bin/env-cmd -e test,development npx mocha -S --no-timeouts ./tests",
+    "test:local": "./node_modules/.bin/env-cmd -e test,local npx mocha -S --no-timeouts ./tests",
+    "eslint:fix": "./node_modules/.bin/eslint --fix --ignore-path .gitignore ./tests .",
+    "eslint:test": "eslint --ignore-path .gitignore ./tests .",
+    "prettier": "./node_modules/.bin/prettier --single-quote --trailing-comma es5 --print-width 80 --write --no-bracket-spacing **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kkyyss/school-management-nodejs-api.git"
+  },
+  "keywords": [
+    "nodeJs",
+    "mysql",
+    "sequelize"
+  ],
+  "author": "Ong Kang Yi",
+  "bugs": {
+    "url": "https://github.com/Kkyyss/school-management-nodejs-api/issues"
+  },
+  "homepage": "https://github.com/Kkyyss/school-management-nodejs-api#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.1",
+    "sequelize": "^6.37.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "chai": "4.2",
+    "env-cmd": "^10.1.0",
+    "eslint": "^6.4.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "mocha": "^10.5.2",
+    "prettier": "^3.3.2"
+  }
+}
